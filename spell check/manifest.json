@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Grammar Checker",
+  "version": "1.0",
+  "description": "Detects specific words on Wikipedia pages",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["://.wikipedia.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
